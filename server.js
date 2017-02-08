@@ -35,8 +35,7 @@ var articles = {
                 <p>
                     Make sure you have all the tools to help you in your journey!
                     </p>`},
-    article-three:
-    {title: 'Article One by Anson',
+    article-three: {title: 'Article One by Anson',
     heading: 'Article Three',
     date: 'Feb 10, 2017',
     content:    `<p>
