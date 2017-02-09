@@ -8,46 +8,52 @@ app.use(morgan('combined'));
 var articles = {
 
     'article-one': {
-    title: 'Article One by Anson',
-    heading: 'Article One',
-    date: 'Feb 8, 2017',
-    content:    `<p>
-                    Getting Started is the first step
-                </p>
-                <p>
-                    Once you do that you are on your way to acheiving your goal!!!
-                </p>
+        title: 'Article One by Anson',
+        heading: 'Article One',
+        date: 'Feb 8, 2017',
+        content:  `
+            <p>
+                Getting Started is the first step
+            </p>
+            <p>
+                Once you do that you are on your way to acheiving your goal!!!
+            </p>
                 
-                <p>
-                    Make sure you have all the tools to help you in your journey!
-                    </p>`},
+            <p>
+                Make sure you have all the tools to help you in your journey!
+            </p>`},
+        
     'article-two': {
         title: 'Article Two by Anson',
-    heading: 'Article Two',
-    date: 'Feb 9, 2017',
-    content:    `<p>
-                    Getting Started is the second step
-                </p>
-                <p>
-                    Once you do that you are on your way to acheiving your goal!!!
-                </p>
+        heading: 'Article Two',
+        date: 'Feb 9, 2017',
+        content:  `
+            <p>
+                Getting Started is the second step
+            </p>
+            <p>
+                Once you do that you are on your way to acheiving your goal!!!
+            </p>
                 
-                <p>
-                    Make sure you have all the tools to help you in your journey!
-                    </p>`},
-    'article-three': {title: 'Article One by Anson',
-    heading: 'Article Three',
-    date: 'Feb 10, 2017',
-    content:    `<p>
-                    Getting Started is the third step
-                </p>
-                <p>
-                    Once you do that you are on your way to acheiving your goal!!!
-                </p>
+            <p>
+                Make sure you have all the tools to help you in your journey!
+            </p>`},
+            
+    'article-three': {
+        title: 'Article Three by Anson',
+        heading: 'Article Three',
+        date: 'Feb 10, 2017',
+    content:  `
+    <       p>
+                Getting Started is the third step
+            </p>
+            <p>
+                Once you do that you are on your way to acheiving your goal!!!
+            </p>
                 
-                <p>
-                    Make sure you have all the tools to help you in your journey!
-                    </p>`},
+            <p>
+                Make sure you have all the tools to help you in your journey!
+            </p>`},
     
 };  
 
@@ -59,7 +65,7 @@ function createTemplate (data) {
 
 
 var htmlTemplate = `
-    <html>
+<html>
     <head>
         <title>
             ${title}
