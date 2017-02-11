@@ -5,6 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+    
+
 var articles = {
 
     'article-one': {
@@ -44,7 +46,7 @@ var articles = {
         heading: 'Article Three',
         date: 'Feb 10, 2017',
     content:  `
-    <       p>
+            <p>
                 Getting Started is the third step
             </p>
             <p>
@@ -68,7 +70,7 @@ var htmlTemplate = `
 <html>
     <head>
         <title>
-            
+            ${title}
         </title>
         <link href="/ui/style.css" rel="stylesheet" />
     </head>
