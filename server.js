@@ -10,7 +10,7 @@ app.use(morgan('combined'));
 var articles = {
 
     'article-one': {
-        //tit: 'Article One by Anson',
+        tit: 'Article One by Anson',
         heading: 'Article One',
         date: 'Feb 8, 2017',
         content:  `
@@ -26,7 +26,7 @@ var articles = {
             </p>`},
         
     'article-two': {
-        //tit: 'Article Two by Anson',
+        tit: 'Article Two by Anson',
         heading: 'Article Two',
         date: 'Feb 9, 2017',
         content:  `
@@ -42,7 +42,7 @@ var articles = {
             </p>`},
             
     'article-three': {
-       // tit: 'Article Three by Anson',
+        tit: 'Article Three by Anson',
         heading: 'Article Three',
         date: 'Feb 10, 2017',
     content:  `
@@ -60,7 +60,7 @@ var articles = {
 };  
 
 function createTemplate (data) {
-    //var tit = data.tit;
+    var tit = data.tit;
     var date = data.date;
     var heading = data.heading;
     var content = data.content;
@@ -70,7 +70,7 @@ var htmlTemplate = `
 <html>
     <head>
         <title>
-      //      ${tit}
+                ${tit}
         </title>
         <link href="/ui/style.css" rel="stylesheet" />
     </head>
@@ -82,7 +82,7 @@ var htmlTemplate = `
             </div>
             <hr/>
             <h3>
-            ${heading}
+                ${heading}
             </h3>
             <div>
                 ${date}
@@ -97,7 +97,12 @@ var htmlTemplate = `
 return htmlTemplate;
 }
 
-
+var counter = 0;
+app.get('/counter', function(req, res) {
+    counter = counter + 1;
+    res.send(counter.toString());
+    
+});
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
