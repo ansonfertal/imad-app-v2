@@ -106,16 +106,6 @@ var htmlTemplate = `
 return htmlTemplate;
 }
 
-var counter = 0;
-app.get('/counter', function(req, res) {
-    counter = counter + 1;
-    res.send(counter.toString());
-    
-});
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
-
 var pool = new Pool(Config);
 pool.query('SELECT * FROM test', function(err, result) {
    if(err) {
@@ -135,6 +125,17 @@ app.get('/:articleName', function(req, res) {
     var articleName = req.param.articleName;
     res.send(createTemplate(articleName));
 });
+
+var counter = 0;
+app.get('/counter', function(req, res) {
+    counter = counter + 1;
+    res.send(counter.toString());
+    
+});
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
