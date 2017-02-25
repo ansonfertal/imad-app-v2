@@ -123,7 +123,7 @@ pool.query('SELECT * FROM test', function(err, result) {
    }else {
        res.send(JSON.stringify(result));
    }
-   }
+   
     
 });
 
