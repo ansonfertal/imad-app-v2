@@ -14,11 +14,11 @@ app.get('/article-one', function (req, res) {
 });
 
 app.get('/article-two', function (req, res) {
-  res.send('Article one under construction');
+  res.send('Article two under construction');
 });
 
 app.get('/article-three', function (req, res) {
-  res.send('Article one under construction');
+  res.send('Article ethre under construction');
 });
 
 app.get('/ui/style.css', function (req, res) {
