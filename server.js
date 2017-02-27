@@ -9,7 +9,16 @@ var articleOne = {
   title: 'Article One by Anson',
   heading: 'Article One',
   date: 'Feb 5, 2017',
-  content:  ''
+  content:  `<p>
+                    First Paragraph 
+                </p>
+                <p>
+                    Second Paragraph
+                </p>
+                
+                <p>
+                    Third Paragraph
+                </p>`
 };
 
 app.get('/', function (req, res) {
