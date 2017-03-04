@@ -105,7 +105,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-
+var pool = new Pool(config);
 app.get('/articles/:articleName', function (req, res) {
     pool.query("SELECT * FROM article WHERE title = '" + req.params.articleName + "'", function(err, result) {
         
